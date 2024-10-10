@@ -1,5 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-/* import Image from 'next/image'; */
+import Gallery from '../../components/Gallery';
 
 
 export default function Home() {
@@ -12,10 +12,12 @@ export default function Home() {
           <a href="/projects" className = 'text-orange-600 font-semibold text-1xl hover:text-orange-500 px-5 underline underline-offset-2'>Projects</a>
           <a href="/gallery" className = 'text-gray-900 font-semibold text-1xl hover:text-orange-500 px-5'>Gallery</a>
         </div>
-      </header>
+      </header> 
       <div className = 'py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-        projects
+        Below are various projects I have completed at High School, University, and Personal projects.
+        <Gallery />
       </div>
+      
       
     
 
