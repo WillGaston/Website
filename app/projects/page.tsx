@@ -13,8 +13,17 @@ export default function Home() {
           <a href="/gallery" className = 'text-gray-900 font-semibold text-1xl hover:text-orange-500 px-5'>Gallery</a>
         </div>
       </header> 
-      <div className = 'py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-        Below are various projects I have completed at High School, University, and Personal projects.
+      <div className = 'py-8 mx-auto text-center flex flex-col items-center'>
+        <h1 className = 'text-3xl font-bold tracking-tight text-gray-800'>
+          My {' '}
+          <span className='text-orange-500'>
+            Projects
+          </span>
+          .
+        </h1>
+      </div>
+      <div className = 'py-4 mx-auto text-center flex flex-col items-center max-w-3xl'>
+        Below are various projects I have completed as High School and Personal projects, and University assignments.
         <Gallery />
       </div>
       
