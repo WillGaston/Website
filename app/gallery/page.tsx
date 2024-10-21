@@ -1,5 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-/* import Image from 'next/image'; */
+import Photo from '../../components/Photos';
 
 
 export default function Home() {
@@ -12,10 +12,21 @@ export default function Home() {
           <a href="/projects" className = 'text-gray-900 font-semibold text-1xl hover:text-orange-500 px-5'>Projects</a>
           <a href="/gallery" className = 'text-orange-600 font-semibold text-1xl hover:text-orange-500 px-5 underline underline-offset-2'>Gallery</a>
         </div>
-      </header>
-      <div className = 'py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-        gallery
+      </header> 
+      <div className = 'py-8 mx-auto text-center flex flex-col items-center'>
+        <h1 className = 'text-3xl font-bold tracking-tight text-gray-800'>
+          My {' '}
+          <span className='text-orange-500'>
+            Photos
+          </span>
+          .
+        </h1>
       </div>
+      <div className = 'py-4 mx-auto text-center flex flex-col items-center max-w-3xl'>
+        Below are various photos I've taken recently.
+        <Photo />
+      </div>
+      
       
     
 
