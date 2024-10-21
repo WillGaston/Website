@@ -26,7 +26,7 @@ export default function Home() {
         {/* Left side with a circular image */}
         <div className="flex justify-center items-center w-1/2">
           <div className="rounded-full overflow-hidden w-64 h-64 border-solid border-4 border-orange-500">
-            <Image src="/images/me.jpg" alt="Your Photo" width = {256} height = {256} className="object-cover w-full h-full" />
+            {/* <Image src="/images/me.jpg" alt="Your Photo" width = {256} height = {256} className="object-cover w-full h-full" /> */}
           </div>
         </div>
 
