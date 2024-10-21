@@ -55,9 +55,9 @@ const Gallery = () => {
       {images.map((image, index) => (
         <div key={index} className="flex flex-col md:flex-row">
           <div className="p-4 items-center justify-center">
-            <p className="text-1xl font-semibold text-center">{image.title}</p>
-            <p className={`text-xs font-normal text-center ${image.color}`}>{image.language}</p>
-            <p className="text-sm mb-2 tracking-tight font-thin text-center">{image.description}</p>
+            <p className="text-2xl font-semibold text-center">{image.title}</p>
+            <p className={`text-base font-normal text-center ${image.color}`}>{image.language}</p>
+            <p className="text-lg mb-2 tracking-tight font-thin text-center">{image.description}</p>
             <div className="relative overflow-hidden rounded-lg shadow-lg h-auto w-full flex justify-center items-center">
               <Image
                 src={image.src}
