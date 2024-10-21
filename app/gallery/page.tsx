@@ -23,7 +23,7 @@ export default function Home() {
         </h1>
       </div>
       <div className = 'py-4 mx-auto text-center flex flex-col items-center max-w-3xl'>
-        Below are various photos I've taken recently.
+        Below are various photos I have taken recently.
         <Photo />
       </div>
       

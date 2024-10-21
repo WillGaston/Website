@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex flex-col justify-center w-1/2 px-2">
           <h1 className="text-4xl font-bold text-gray-900">Will Gaston</h1>
           <p className="text-lg text-gray-700 mt-4">
-            I'm a first year computer science student at UNSW, currently living in Sydney but originally from Orange in regional NSW.
+            I am a first year computer science student at UNSW, currently living in Sydney but originally from Orange in regional NSW.
           </p>
         </div>
       </div>
