@@ -15,7 +15,7 @@ export default function Home() {
       </header>
       <div className = 'py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
         <h1 className = 'text-5xl font-bold tracking-tight text-gray-800'>
-          Hey, I'm {' '}
+          Hey, I am {' '}
           <span className='text-orange-500'>
             Will
           </span>
