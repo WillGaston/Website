@@ -54,7 +54,11 @@ const images = [
     description: 'Simple number guessing game' },
 ];
 
-const Gallery = (
+interface GalleryProps {
+  selectedLanguage: string; // Define the type for selectedLanguage
+}
+
+const Gallery: React.FC<GalleryProps> = (
   { selectedLanguage }
 ) => {
   const filteredImages = selectedLanguage

@@ -9,7 +9,7 @@ export default function Home() {
 
   const [selectedLanguage, setSelectedLanguage] = useState('');
 
-  const handleLanguageFilter = (language) => {
+  const handleLanguageFilter = (language: string) => {
     setSelectedLanguage(language === selectedLanguage ? '' : language);
   };
 
