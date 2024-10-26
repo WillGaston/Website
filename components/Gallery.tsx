@@ -6,7 +6,7 @@ const images = [
     language: 'Python | Pandas', 
     title: 'NovelNote',
     color: 'text-lime-700',
-    description: 'Python program featuring robust novel and quote recording capabilities, and data queries and statistics' },
+    description: 'Python program featuring robust novel and quote recording capabilities, data querying and graphical statistics' },
   { src: '/images/huffman.jpg', 
     language: 'C',
     color: 'text-blue-700',
@@ -28,15 +28,15 @@ const images = [
       title: 'Breakout in MIPS',
       description: 'Translated given C code into MIPS assembly: made during COMP2521 24T2 Ass1' },
   { src: '/images/website.jpg', 
-    language: 'React | TypeScript',
+    language: 'TypeScript | React',
       color: 'text-blue-400',
       title: 'Personal Website',
       description: 'Personal Website for my portfolio and to showcase my personality' },
-  { src: '/images/numbrainer.jpg', 
-      language: 'Python',
-      color: 'text-lime-700',
-      title: 'Num-Brainer',
-      description: 'Simple number guessing game' },
+  { src: '/images/youngmaster.jpg', 
+    language: 'Python',
+    color: 'text-lime-700',
+    title: 'Young Master Chat Bot',
+    description: 'Chat bot using open ai api' },
   { src: '/images/dripshop.jpg', 
     language: 'Visual Basic',
     color: 'text-indigo-600',
@@ -46,13 +46,36 @@ const images = [
     language: 'HTML | CSS',
     color: 'text-slate-500',
     title: 'Velocity Gaming Website',
-    description: 'Website for made up gaming esports apparel business (also did logo)' },
+    description: 'Website gaming esports apparel business' },
+  { src: '/images/numbrainer.jpg', 
+    language: 'Python',
+    color: 'text-lime-700',
+    title: 'Num-Brainer',
+    description: 'Simple number guessing game' },
 ];
 
-const Gallery = () => {
+const Gallery = (
+  { selectedLanguage }
+) => {
+  const filteredImages = selectedLanguage
+    ? images.filter((image) => {
+        if (selectedLanguage === 'JavaScript/TypeScript') {
+          return ['JavaScript', 'TypeScript'].some(lang => image.language.includes(lang));
+        } else if (selectedLanguage === 'C') {
+          return image.language === 'C';
+        } else if (selectedLanguage === 'Other') {
+          return !['JavaScript', 'TypeScript | React', 'Python | Pandas', 'TypeScript', 'Assembly', 'C', 'Python'].includes(image.language)
+        } else if (selectedLanguage === 'Python') {
+          return image.language.includes('Python');
+        } else {
+          return image.language === selectedLanguage;
+        }
+      })
+    : images;
+
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-6">
-      {images.map((image, index) => (
+      {filteredImages.map((image, index) => (
         <div key={index} className="flex flex-col md:flex-row">
           <div className="p-4 items-center justify-center">
             <p className="text-2xl font-semibold text-center">{image.title}</p>

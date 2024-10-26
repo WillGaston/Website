@@ -1,5 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-/* import Image from 'next/image'; */
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -8,9 +8,9 @@ export default function Home() {
       <header className="flex flex-row justify-between max-w-5xl mx-auto px-4 py-3 sm:px-6">
         <a href="/" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500'>Home</a>
         <div>
-          <a href="/about" className = 'text-orange-600 font-semibold text-2xl hover:text-orange-500 px-7 underline underline-offset-2'>About</a>
-          <a href="/projects" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500 px-7'>Projects</a>
-          <a href="/gallery" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500 px-7'>Gallery</a>
+          <a href="/about" className = 'text-orange-600 font-semibold text-2xl hover:text-orange-500 px-5 underline underline-offset-2'>About</a>
+          <a href="/projects" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500 px-5'>Projects</a>
+          <a href="/gallery" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500 px-5'>Gallery</a>
         </div>
       </header> 
       <div className = 'py-16 mx-auto text-center flex flex-col items-center'>
@@ -24,26 +24,27 @@ export default function Home() {
       </div>
       <div className="flex h-[60vh]">
         {/* Left side with a circular image */}
-        <div className="flex justify-center items-center w-2/5">
+        <div className="flex justify-center items-center w-1/2">
           <div className="rounded-full overflow-hidden w-96 h-96 border-solid border-4 border-orange-500">
-            {/* <Image src="/images/me.jpg" alt="Your Photo" width = {500} height = {500} className="object-cover w-full h-full" /> */}
+            <Image src="/images/me.jpg" alt="Your Photo" width = {500} height = {500} className="object-cover w-full h-full" />
           </div>
         </div>
 
         {/* Right side with text */}
-        <div className="flex flex-col justify-center w-3/5 px-2">
+        <div className="flex flex-col justify-center w-1/2 px-2">
           <h1 className="text-6xl font-bold text-gray-900">Will Gaston</h1>
           <p className="text-2xl text-gray-700 mt-4">
-            I am a first year computer science student at UNSW, currently living in Sydney but originally from Orange in regional NSW.
+            1st year Computer Science student @ UNSW <br></br>
+            ⚲ Sydney / Orange NSW Australia
           </p>
         </div>
       </div>
 
-      <div className="py-16 flex justify-center">
+      <div className="py-12 flex justify-center">
         <div className ="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Languages</h1>
           <p className="text-2xl text-gray-700">Below are the languages and frameworks that I am familiar with. <br></br> As a student I am constantly learning and thus my proficiency is rapidly increasing.</p>
-          <div className="py-6 grid grid-cols-3 gap-4 h-[40-vh]">
+          <div className="py-6 grid grid-cols-3 gap-4">
             <p className="text-gray-700"> • {' '}
               <span className='text-blue-700'>
                 C
@@ -63,12 +64,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-16 flex justify-center">
+      <div className="py-12 flex justify-center">
         <div className ="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Completed Uni Courses</h1>
           <p className="text-2xl text-gray-700">Below are university courses I have completed or am currently studying.<br></br></p>
-          <div className="py-6 grid grid-cols-2 h-[40vh]">
-            <p className="text-gray-700 text-start text-sm"> • MATH1131 - 1A <br></br>
+          <div className="py-6 grid grid-cols-2">
+            <p className="text-gray-700 text-start text-lg"> • MATH1131 - 1A <br></br>
             • MATH1231 - 1B<br></br>
             • MATH1081 - Discrete</p>
             <p className="text-gray-700 text-start text-lg"> • COMP1511 - Prog. Fundamentals <br></br>
@@ -79,11 +80,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="py-12 flex justify-center">
         <div className ="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Courses I want to complete</h1>
           <p className="text-2xl text-gray-700">Below are university courses I intend to study.<br></br></p>
-          <div className="py-6 grid grid-cols-2 h-[40vh]">
+          <div className="py-6 grid grid-cols-2">
             <p className="text-gray-700 text-start text-lg"> 
               Year 2 <br></br><br></br>
               Term 1 <br></br>
