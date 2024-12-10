@@ -92,20 +92,20 @@ export default function Home() {
               • COMP2041 - Software Construction<br></br>
               • COMP3311 - Databases<br></br><br></br>
               Term 2 <br></br>
-              • COMP3121 - Algo Design & Analysis<br></br>
-              • COMP6841 - Security Eng / Cyber Security<br></br><br></br>
-              Term 3 <br></br>
               • COMP3331 - Networks<br></br>
-              • COMP6080 - Web Front End<br></br>
-              • MATH3411 - Information, Codes, and Ciphers<br></br><br></br>
+              • COMP6841 - Extended Sec Eng / Cyber Sec<br></br>
+              • COMP3231 - Operating Systems<br></br><br></br>
+              Term 3 <br></br>
+              • COMP6991 - Rust<br></br>
+              • COMP3411 - Artificial Intelligence<br></br>
+              • COMP3121 - Extended Algo Design & Analysis<br></br><br></br>
             </p>
             <p className="text-gray-700 text-start text-lg">
             Year 3 <br></br><br></br>
             I have not decided on my courses and the structure <br></br>exactly but am thinking of the following:<br></br><br></br>
-            • COMP3231 - OS<br></br>
+            • COMP6080 - Web Front End<br></br>
             • COMP4337 - Securing Fixed/Wireless Networks<br></br>
             • COMP3900 - Information Retrieval and Web Search<br></br>
-            • COMP6991 - Rust<br></br>
             • COMP3900 - Comp Sci Project<br></br>
             • COMP4920 - Issues/Ethics in IT<br></br>
             • COMP9417 - Machine Learning and Data Mining<br></br>

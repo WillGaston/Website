@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { describe } from 'node:test';
 import React from 'react';
 
 const images = [
@@ -12,6 +13,11 @@ const images = [
     color: 'text-blue-700',
     title: 'Huffman Tree Encoder/Decoder', 
     description: 'CLI program which can encode and decode a huffman tree: made during COMP2521 24T2 Ass1' },
+  { src: '/images/toohak.jpg',
+    language: 'TypeScript',
+    color: 'text-blue-400',
+    title: 'Toohak - Quiz Game Backend',
+    description: 'Quiz Game Backend using RESTful API, with integration testing of HTTP endpoints: made during COMP1531 24T3' },
   { src: '/images/poodle.jpg', 
     language: 'C',
     color: 'text-blue-700',
@@ -26,12 +32,17 @@ const images = [
       language: 'Assembly',
       color: 'text-red-500',
       title: 'Breakout in MIPS',
-      description: 'Translated given C code into MIPS assembly: made during COMP2521 24T2 Ass1' },
+      description: 'Translated given C code into MIPS assembly: made during COMP1521 24T2 Ass1' },
   { src: '/images/website.jpg', 
     language: 'TypeScript | React',
       color: 'text-blue-400',
       title: 'Personal Website',
       description: 'Personal Website for my portfolio and to showcase my personality' },
+  { src: '/images/salesaggregator.png',
+    language: 'JavaScript',
+    color: 'text-yellow-500',
+    title: 'SalesAggregator',
+    description: 'Web Scraper and React website for showing Sales and Limited Offers from online retailers.' },
   { src: '/images/youngmaster.jpg', 
     language: 'Python',
     color: 'text-lime-700',
@@ -55,7 +66,7 @@ const images = [
 ];
 
 interface GalleryProps {
-  selectedLanguage: string; // Define the type for selectedLanguage
+  selectedLanguage: string;
 }
 
 const Gallery: React.FC<GalleryProps> = (
