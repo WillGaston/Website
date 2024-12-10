@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { describe } from 'node:test';
 import React from 'react';
 
 const images = [
