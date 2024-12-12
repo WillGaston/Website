@@ -67,15 +67,17 @@ export default function Home() {
       <div className="py-12 flex justify-center">
         <div className ="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Completed Uni Courses</h1>
+          <h2 className="text-2xl font-bold text-gray-800">WAM: 89.75</h2>
           <p className="text-2xl text-gray-700">Below are university courses I have completed or am currently studying.<br></br></p>
           <div className="py-6 grid grid-cols-2">
-            <p className="text-gray-700 text-start text-lg"> • MATH1131 - 1A <br></br>
-            • MATH1231 - 1B<br></br>
-            • MATH1081 - Discrete</p>
-            <p className="text-gray-700 text-start text-lg"> • COMP1511 - Prog. Fundamentals <br></br>
-            • COMP1521 - Comp. Sys. Fundamentals <br></br>
-            • COMP1531 - SENG Fundamentals <br></br>
-            • COMP2521 - Data Structures and Algorithms </p>
+            <p className="text-gray-700 text-start text-lg"> • MATH1131 - 1A : 89<br></br>
+            • MATH1231 - 1B : 86<br></br>
+            • MATH1081 - Discrete : 88<br></br>
+            • PHYS1160 - Intro to Astronomy : 97</p>
+            <p className="text-gray-700 text-start text-lg"> • COMP1511 - Prog. Fundamentals : 85<br></br>
+            • COMP1521 - Comp. Sys. Fundamentals : 89<br></br>
+            • COMP1531 - SENG Fundamentals : 99<br></br>
+            • COMP2521 - Data Structures and Algorithms : 86</p>
           </div>
         </div>
       </div>
