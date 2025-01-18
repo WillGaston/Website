@@ -43,11 +43,11 @@ export default function Home() {
       <div className="py-12 flex justify-center">
         <div className ="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Languages</h1>
-          <p className="text-2xl text-gray-700">Below are the languages and frameworks that I am familiar with. <br></br> As a student I am constantly learning and thus my proficiency is rapidly increasing.</p>
+          <p className="text-2xl text-gray-700">Below are the languages that I am currently learning <br></br> </p>
           <div className="py-6 grid grid-cols-3 gap-4">
             <p className="text-gray-700"> • {' '}
               <span className='text-blue-700'>
-                C
+                C/C++
               </span></p>
             <p className="text-gray-700"> • {' '}
               <span className='text-yellow-500'>
@@ -111,6 +111,7 @@ export default function Home() {
             • COMP3900 - Comp Sci Project<br></br>
             • COMP4920 - Issues/Ethics in IT<br></br>
             • COMP9417 - Machine Learning and Data Mining<br></br>
+            • COMP6771 - Advanced C++<br></br>
             </p>
           </div>
         </div>
