@@ -1,18 +1,9 @@
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Image from 'next/image';
 
 
-export default function Home() {
+export default function AboutPage() {
   return (
-    <MaxWidthWrapper>
-      <header className="flex flex-row justify-between max-w-5xl mx-auto px-4 py-3 sm:px-6">
-        <a href="/" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500'>Home</a>
-        <div>
-          <a href="/about" className = 'text-orange-600 font-semibold text-2xl hover:text-orange-500 px-5 underline underline-offset-2'>About</a>
-          <a href="/projects" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500 px-5'>Projects</a>
-          <a href="/gallery" className = 'text-gray-900 font-semibold text-2xl hover:text-orange-500 px-5'>Gallery</a>
-        </div>
-      </header> 
+    <div className="flex flex-col items-center w-screen h-screen">
       <div className = 'py-16 mx-auto text-center flex flex-col items-center'>
         <h1 className = 'text-5xl font-bold tracking-tight text-gray-800'>
           {' '}
@@ -34,8 +25,14 @@ export default function Home() {
         <div className="flex flex-col justify-center w-1/2 px-2">
           <h1 className="text-6xl font-bold text-gray-900">Will Gaston</h1>
           <p className="text-2xl text-gray-700 mt-4">
-            2nd year Computer Science student @ UNSW <br></br>
-            ⚲ Sydney / Orange NSW Australia
+            Originally from Orange in country NSW, I currently live and study in <span className='text-orange-500'>
+            Sydney at UNSW
+          </span>.<br></br><br></br>
+            I'm am a <span className='text-orange-500'>
+            2nd year
+          </span> (penultimate) student in Computer Science with an <span className='text-orange-500'>
+            89.75 WAM
+          </span>.
           </p>
         </div>
       </div>
@@ -105,7 +102,6 @@ export default function Home() {
             <p className="text-gray-700 text-start text-lg">
             Year 3 <br></br><br></br>
             I have not decided on my courses and the structure <br></br>exactly but am thinking of the following:<br></br><br></br>
-            • COMP6991 - Rust<br></br>
             • COMP4337 - Securing Fixed/Wireless Networks<br></br>
             • COMP3900 - Information Retrieval and Web Search<br></br>
             • COMP3900 - Comp Sci Project<br></br>
@@ -117,5 +113,5 @@ export default function Home() {
         </div>
       </div>
 
-    </MaxWidthWrapper>)
+    </div>)
 }
