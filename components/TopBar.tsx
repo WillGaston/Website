@@ -1,8 +1,6 @@
 "use client"
 
 import React, { useContext } from "react";
-import { useState } from "react";
-import { createContext } from "react";
 import { TopBarContext } from "@/components/TopBarContext";
 
 export default function TopBar({ children }) {

@@ -28,7 +28,7 @@ export default function AboutPage() {
             Originally from Orange in country NSW, I currently live and study in <span className='text-orange-500'>
             Sydney at UNSW
           </span>.<br></br><br></br>
-            I'm am a <span className='text-orange-500'>
+            I am a <span className='text-orange-500'>
             2nd year
           </span> (penultimate) student in Computer Science with an <span className='text-orange-500'>
             89.75 WAM
