@@ -17,7 +17,7 @@ export default function AboutPage() {
         {/* Left side with a circular image */}
         <div className="flex justify-center items-center w-1/2">
           <div className="rounded-full overflow-hidden w-96 h-96 border-solid border-4 border-orange-500">
-            <Image src="/images/me.jpg" alt="Your Photo" width = {500} height = {500} className="object-cover w-full h-full" />
+            <Image src="/images/me1.jpg" alt="Your Photo" width = {500} height = {500} className="object-cover w-full h-full" />
           </div>
         </div>
 

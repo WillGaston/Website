@@ -17,7 +17,8 @@ export default function TopBar({ children }) {
 }
 
 export function TopBarItem({text, index}) {
-  const { active, setActive} = useContext(TopBarContext)
+  const context = useContext(TopBarContext);
+  const { active, setActive } = context;
   return (
     <li
       onClick = {() => setActive(index)} 
