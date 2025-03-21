@@ -105,12 +105,12 @@ const Gallery: React.FC<GalleryProps> = (
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-6">
       {filteredImages.map((image, index) => (
-        <div key={index} className="flex flex-col md:flex-row">
-          <div className="p-4 items-center justify-center">
+        <div key={index} className="flex flex-col">
+          <div className="p-4 flex flex-col items-center justify-center">
             <p className="text-2xl font-semibold text-center">{image.title}</p>
             <p className={`text-base font-normal text-center ${image.color}`}>{image.language}</p>
             <p className="text-lg mb-2 tracking-tight font-thin text-center">{image.description}</p>
-            <div className="relative overflow-hidden rounded-lg shadow-lg h-auto w-full flex justify-center items-center">
+            <div className="overflow-hidden rounded-lg shadow-lg h-auto w-full flex justify-center items-center">
               <Image
                 src={image.src}
                 alt={`Image ${index + 1}`}

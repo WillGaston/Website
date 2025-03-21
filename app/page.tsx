@@ -2,12 +2,16 @@
 
 import React, { useContext } from "react";
 import { TopBarProvider, TopBarContext } from "@/components/TopBarContext";
-import { TopBarItem } from "@/components/TopBar";
+import { TopBarItem, TopBarButton } from "@/components/TopBar";
 import TopBar from "@/components/TopBar";
 import HomePage from "@/components/Home";
 import ProjectsPage from "@/components/Projects";
 import AboutPage from "@/components/About";
 import GalleryPage from "@/components/GalleryPage";
+
+import { FiGithub } from "react-icons/fi";
+import { CiLinkedin } from "react-icons/ci";
+
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -30,6 +34,8 @@ function HomeContent() {
         <TopBarItem text="About Me & Academics" index={1}/>
         <TopBarItem text="Projects" index={2}/>
         <TopBarItem text="Gallery" index={3}/>
+        <TopBarButton icon={<CiLinkedin />} link={"https://www.linkedin.com/in/WillGaston1/"} />
+        <TopBarButton icon={<FiGithub />} link={"https://github.com/WillGaston"} />
       </TopBar>
       <div className="flex">
       <AnimatePresence mode="wait">
