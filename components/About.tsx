@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col items-center w-screen h-screen">
       <div className = 'py-16 mx-auto text-center flex flex-col items-center'>
-        <h1 className = 'text-5xl font-bold tracking-tight text-gray-800'>
+        <h1 className = 'text-6xl font-bold font-mono tracking-tighter text-gray-800'>
           {' '}
           <span className='text-orange-500'>
             Me
@@ -16,21 +16,23 @@ export default function AboutPage() {
       <div className="flex h-[60vh]">
         {/* Left side with a circular image */}
         <div className="flex justify-center items-center w-1/2">
-          <div className="rounded-full overflow-hidden w-96 h-96 border-solid border-4 border-orange-500">
+          <div className="rounded-3xl overflow-hidden w-96 h-96 border-solid border-4 border-orange-500">
             <Image src="/images/me1.jpg" alt="Your Photo" width = {500} height = {500} className="object-cover w-full h-full" />
           </div>
         </div>
 
         {/* Right side with text */}
-        <div className="flex flex-col justify-center w-1/2 px-2">
-          <h1 className="text-6xl font-bold text-gray-900">Will Gaston</h1>
-          <p className="text-2xl text-gray-700 mt-4">
+        <div className="flex flex-col justify-center w-1/2">
+          <h1 className="text-6xl font-bold text-gray-900 font-mono tracking-tighter">Will Gaston</h1>
+          <p className="text-2xl text-gray-700 font-mono tracking-tighter mt-4">
             Originally from Orange in country NSW, I currently live and study in <span className='text-orange-500'>
             Sydney at UNSW
           </span>.<br></br><br></br>
             I am a <span className='text-orange-500'>
             2nd year
-          </span> (penultimate) student in Computer Science with an <span className='text-orange-500'>
+          </span> (penultimate) student in <span className='text-orange-500'>
+            Computer Science
+          </span> with an <span className='text-orange-500'>
             89.75 WAM
           </span>.
           </p>
@@ -39,21 +41,21 @@ export default function AboutPage() {
 
       <div className="py-12 flex justify-center">
         <div className ="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">Languages</h1>
-          <p className="text-2xl text-gray-700">Below are the languages that I am currently learning <br></br> </p>
+          <h1 className="text-3xl font-bold text-gray-900 font-mono tracking-tighter">Languages</h1>
+          <p className="text-2xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning <br></br> </p>
           <div className="py-6 grid grid-cols-3 gap-4">
             <p className="text-gray-700"> • {' '}
-              <span className='text-blue-700'>
+              <span className='text-blue-700 font-mono tracking-tighter text-xl'>
                 C/C++
               </span></p>
-            <p className="text-gray-700"> • {' '}
+            <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
               <span className='text-yellow-500'>
                 JavaScript
               </span> {' '}/{' '}
               <span className = 'text-blue-400'>
                 TypeScript
               </span></p>
-            <p className="text-gray-700"> • {' '}
+            <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
               <span className='text-lime-700'>
                 Python
               </span></p>
@@ -62,7 +64,7 @@ export default function AboutPage() {
       </div>
 
       <div className="py-12 flex justify-center">
-        <div className ="text-center">
+        <div className ="text-center font-mono tracking-tighter">
           <h1 className="text-3xl font-bold text-gray-900">Completed Uni Courses</h1>
           <h2 className="text-2xl font-bold text-gray-800">WAM: 89.75</h2>
           <p className="text-2xl text-gray-700">Below are university courses I have completed or am currently studying.<br></br></p>
@@ -80,7 +82,7 @@ export default function AboutPage() {
       </div>
 
       <div className="py-12 flex justify-center">
-        <div className ="text-center">
+        <div className ="text-center font-mono tracking-tighter">
           <h1 className="text-3xl font-bold text-gray-900">Courses I want to complete</h1>
           <p className="text-2xl text-gray-700">Below are university courses I intend to study.<br></br></p>
           <div className="py-6 grid grid-cols-2">

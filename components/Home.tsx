@@ -15,15 +15,19 @@ export default function HomePage({  }) {
             
                     {/* Right side with text */}
                     <div className="flex flex-col justify-center w-1/2 px-2">
-                      <h1 className="text-6xl font-bold text-gray-900">Hey, I am {' '}
+                      <h1 className="text-5xl font-mono font-bold text-gray-900">Hey, I am {' '}
                         <span className='text-orange-500'>
                           Will
                         </span>
                       .</h1>
                       <br></br>
-                      <p className="text-2xl text-gray-700 mt-4">
-                        <br></br>2nd year Computer Science student @ UNSW <br></br><br></br>
-                        ⚲ Sydney, Australia
+                      <p className="text-2xl font-mono text-gray-700 mt-4">
+                        <br></br>2nd Year <span className='text-orange-500'>
+                          Computer Science
+                        </span> student @ UNSW <br></br><br></br>
+                        ⚲ <span className='text-orange-500'>
+                          Sydney
+                        </span>, Australia
                       </p>
                     </div>
                   </div>
