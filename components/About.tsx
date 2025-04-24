@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="py-12 flex justify-center">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold text-gray-900 font-mono tracking-tighter">Languages</h1>
-                    <p className="text-2xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning <br></br> </p>
+                    <p className="text-2xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning or have had exposure to <br></br> </p>
                     <div className="py-6 grid grid-cols-3 gap-4">
                         <p className="text-gray-700"> • {' '}
                             <span className='text-blue-700 font-mono tracking-tighter text-xl'>
@@ -59,6 +59,18 @@ export default function AboutPage() {
                             <span className='text-lime-700'>
                                 Python
                             </span></p>
+                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
+                            <span className='text-orange-400'>
+                                Java
+                            </span></p>
+                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
+                            <span className='text-red-400'>
+                                SQL
+                            </span></p>
+                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
+                            <span className='text-gray-500'>
+                                Shell
+                            </span></p>
                     </div>
                 </div>
             </div>
@@ -72,7 +84,7 @@ export default function AboutPage() {
                         <p className="text-gray-700 text-start text-lg"> • MATH1131 - 1A : 89<br></br>
                             • MATH1231 - 1B : 86<br></br>
                             • MATH1081 - Discrete : 88<br></br>
-                            • PHYS1160 - Intro to Astronomy : 97</p>
+                            • PHYS1160 - Intro to Astronomy : 97 (gen. ed.)</p>
                         <p className="text-gray-700 text-start text-lg"> • COMP1511 - Prog. Fundamentals : 85<br></br>
                             • COMP1521 - Comp. Sys. Fundamentals : 89<br></br>
                             • COMP1531 - SENG Fundamentals : 99<br></br>
@@ -89,26 +101,27 @@ export default function AboutPage() {
                         <p className="text-gray-700 text-start text-lg">
                             Year 2 <br></br><br></br>
                             Term 1 <br></br>
-                            • COMP2511 - OOP<br></br>
                             • COMP2041 - Software Construction<br></br>
+                            • COMP2511 - OOP<br></br>
                             • COMP3311 - Databases<br></br><br></br>
                             Term 2 <br></br>
-                            • COMP3331 - Networks<br></br>
-                            • COMP6841 - Extended Sec Eng / Cyber Sec<br></br>
                             • COMP3231 - Operating Systems<br></br>
+                            • COMP3331 - Networks<br></br>
+                            • COMP6841 - Extended Sec Eng / Cyber Sec<br></br><br></br>
                             Term 3 <br></br>
-                            • COMP6991 - Rust<br></br>
-                            • COMP6080 - Web Front End<br></br>
-                            • COMP3121 - Algo Design & Analysis<br></br><br></br>
+                            • COMP3121 - Algo Design & Analysis<br></br>
+                            • COMP6080 - Web Front End<br></br><br></br>
                         </p>
                         <p className="text-gray-700 text-start text-lg">
                             Year 3 <br></br><br></br>
                             I have not decided on my courses and the structure <br></br>exactly but am thinking of the following:<br></br><br></br>
-                            • COMP4337 - Securing Fixed/Wireless Networks<br></br>
-                            • COMP3900 - Information Retrieval and Web Search<br></br>
                             • COMP3900 - Comp Sci Project<br></br>
+                            • COMP4337 - Securing Fixed/Wireless Networks<br></br>
                             • COMP4920 - Issues/Ethics in IT<br></br>
-                            • COMP9417 - Machine Learning and Data Mining<br></br><br></br>
+                            • COMP6714 - Information Retrieval and Web Search<br></br>
+                            • COMP6843 - Extended Web Security<br></br>
+                            • COMP9417 - Machine Learning and Data Mining<br></br>
+                            • ARST2363 - CHinese Philosophy (gen. ed.)<br></br><br></br>
                         </p>
                     </div>
                 </div>

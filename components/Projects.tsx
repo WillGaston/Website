@@ -50,12 +50,12 @@ export default function ProjectsPage() {
             JavaScript/TypeScript
           </button>
           <button
-            onClick={() => handleLanguageFilter('Assembly')}
+            onClick={() => handleLanguageFilter('Java')}
             className={`py-2 px-4 font-mono tracking-tighter rounded-full ${
-              selectedLanguage === 'Assembly' ? 'bg-red-500 text-white' : 'bg-white text-red-500'
-            } border border-red-500 hover:bg-red-100 hover:text-red-500`}
+              selectedLanguage === 'Java' ? 'bg-orange-400 text-white' : 'bg-white text-orange-400'
+            } border border-orange-400 hover:bg-red-100 hover:text-orange-400`}
           >
-            Assembly
+            Java
           </button>
           <button
             onClick={() => handleLanguageFilter('Other')}
