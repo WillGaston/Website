@@ -1,7 +1,35 @@
 import Image from 'next/image';
+import { useState } from 'react';
+import CourseCard from './CourseCard';
+import CourseTabs from './CourseTabs';
 
+const courses = {
+    completed: [{courseCode: "COMP1511", courseTitle: "Programming Fundamentals", term: "24T1", tags: ["C"], grade: "85"},
+        {courseCode: "COMP1521", courseTitle: "Computer Systems Fundamentals", term: "24T2", tags: ["C", "Assembly"], grade: "89"},
+        {courseCode: "COMP1531", courseTitle: "Software Engineering Fundamentals", term: "24T3", tags: ["TypeScript", "Git"], grade: "99"},
+        {courseCode: "COMP2521", courseTitle: "Data Structures & Algorithms", term: "24T2", tags: ["C"], grade: "86"},
+        {courseCode: "MATH1131", courseTitle: "Mathematics 1A", term: "24T1", tags: ["Linear Algebra", "Calc."], grade: "89"},
+        {courseCode: "MATH1231", courseTitle: "Mathematics 1B", term: "24T2", tags: ["Linear Algebra", "Calc."], grade: "86"},
+        {courseCode: "MATH1081", courseTitle: "Discrete Mathematics", term: "24T3", tags: ["Number Theory", "Proofs"], grade: "88"},
+        {courseCode: "PHYS1160", courseTitle: "Introduction to Astronomy", term: "24T3", tags: ["Physics", "Gen ed"], grade: "97"}
+    ],
+    completing: [{courseCode: "COMP2511", courseTitle: "Object Oriented Design & Programming", term: "25T1", tags: ["Java", "Git"], grade: ""},
+        {courseCode: "COMP2041", courseTitle: "Software Construction: Techniques and Tools", term: "25T1", tags: ["Shell", "Python"], grade: ""},
+        {courseCode: "COMP3311", courseTitle: "Database Systems", term: "25T1", tags: ["PostgreSQL", "Python"], grade: ""}
+    ],
+    planned: [{courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: ""},
+        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: [], grade: ""},
+        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: [], grade: ""},
+        {courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: ""},
+        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript/TypeScript", "HTML/CSS", "React"], grade: ""},
+        {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26", tags: [], grade: ""},
+        {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26", tags: [], grade: ""},
+        {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26", tags: ["Confucianism", "Toaism", "Mohism", "Legalism"], grade: ""}
+    ]
+};
 
 export default function AboutPage() {
+    const [activeTab, setActiveTab] = useState<'completed' | 'planned' | 'completing'>('completed');
     return (
         <div className="flex flex-col items-center w-screen h-screen">
             <div className='py-16 mx-auto text-center flex flex-col items-center'>
@@ -75,56 +103,13 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="py-12 flex justify-center">
-                <div className="text-center font-mono tracking-tighter">
-                    <h1 className="text-3xl font-bold text-gray-900">Completed Uni Courses</h1>
-                    <h2 className="text-2xl font-bold text-gray-800">WAM: 89.75</h2>
-                    <p className="text-2xl text-gray-700">Below are university courses I have completed or am currently studying.<br></br></p>
-                    <div className="py-6 grid grid-cols-2">
-                        <p className="text-gray-700 text-start text-lg"> • MATH1131 - 1A : 89<br></br>
-                            • MATH1231 - 1B : 86<br></br>
-                            • MATH1081 - Discrete : 88<br></br>
-                            • PHYS1160 - Intro to Astronomy : 97 (gen. ed.)</p>
-                        <p className="text-gray-700 text-start text-lg"> • COMP1511 - Prog. Fundamentals : 85<br></br>
-                            • COMP1521 - Comp. Sys. Fundamentals : 89<br></br>
-                            • COMP1531 - SENG Fundamentals : 99<br></br>
-                            • COMP2521 - Data Structures and Algorithms : 86</p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="py-12 flex justify-center">
-                <div className="text-center font-mono tracking-tighter">
-                    <h1 className="text-3xl font-bold text-gray-900">Courses I want to complete</h1>
-                    <p className="text-2xl text-gray-700">Below are university courses I intend to study.<br></br></p>
-                    <div className="py-6 grid grid-cols-2">
-                        <p className="text-gray-700 text-start text-lg">
-                            Year 2 <br></br><br></br>
-                            Term 1 <br></br>
-                            • COMP2041 - Software Construction<br></br>
-                            • COMP2511 - OOP<br></br>
-                            • COMP3311 - Databases<br></br><br></br>
-                            Term 2 <br></br>
-                            • COMP3231 - Operating Systems<br></br>
-                            • COMP3331 - Networks<br></br>
-                            • COMP6841 - Extended Sec Eng / Cyber Sec<br></br><br></br>
-                            Term 3 <br></br>
-                            • COMP3121 - Algo Design & Analysis<br></br>
-                            • COMP6080 - Web Front End<br></br><br></br>
-                        </p>
-                        <p className="text-gray-700 text-start text-lg">
-                            Year 3 <br></br><br></br>
-                            I have not decided on my courses and the structure <br></br>exactly but am thinking of the following:<br></br><br></br>
-                            • COMP3900 - Comp Sci Project<br></br>
-                            • COMP4337 - Securing Fixed/Wireless Networks<br></br>
-                            • COMP4920 - Issues/Ethics in IT<br></br>
-                            • COMP6714 - Information Retrieval and Web Search<br></br>
-                            • COMP6843 - Extended Web Security<br></br>
-                            • COMP9417 - Machine Learning and Data Mining<br></br>
-                            • ARST2363 - CHinese Philosophy (gen. ed.)<br></br><br></br>
-                        </p>
-                    </div>
-                </div>
+            <h1 className="text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Courses</h1>
+            <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-52">
+                {courses[activeTab].map((course, index) => (
+                <CourseCard key={index} course={course} type={activeTab} />
+                ))}
             </div>
 
         </div>)
