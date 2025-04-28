@@ -14,11 +14,14 @@ type CourseCardType = {
 }
 
 const languageColors: Record<string, string> = {
-  "C": 'bg-yellow-500',
-  "Python": 'bg-green-500',
+  "C": 'bg-blue-700',
+  "Python": 'bg-lime-700',
   "Assembly": 'bg-red-500',
-  "Java": 'bg-orange-500',
-  "Go": 'bg-cyan-500',
+  "Java": 'bg-orange-400',
+  'JavaScript': 'bg-yellow-500',
+  "TypeScript": 'bg-blue-400',
+  "PostgreSQL": 'bg-red-400',
+  "Shell": 'bg-gray-500'
 };
 
 export default function CourseCard({ course, type }: CourseCardType) {
@@ -26,7 +29,7 @@ export default function CourseCard({ course, type }: CourseCardType) {
   const areCompleting = type == 'completing'
 
   return (
-    <div className={`p-4 rounded-xl shadow-md border ${isCompleted ? 'border-green-400' : (areCompleting ? 'text-red-400' : 'text-blue-400')}`}>
+    <div className={`p-4 max-w-sm rounded-xl shadow-md border ${isCompleted ? 'border-green-400' : (areCompleting ? 'text-red-400' : 'text-blue-400')}`}>
       <h2 className="text-xl font-semibold text-gray-800">{course.courseTitle}</h2>
       <p className="text-gray-600">{course.courseCode}</p>
       <p className={`mt-2 text-sm text-black`}>

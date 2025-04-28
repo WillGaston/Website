@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import CourseCard from './CourseCard';
 import CourseTabs from './CourseTabs';
+import LanguageBadge from './LanguageBadge';
 
 const courses = {
     completed: [{courseCode: "COMP1511", courseTitle: "Programming Fundamentals", term: "24T1", tags: ["C"], grade: "85"},
@@ -21,12 +22,24 @@ const courses = {
         {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: [], grade: ""},
         {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: [], grade: ""},
         {courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: ""},
-        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript/TypeScript", "HTML/CSS", "React"], grade: ""},
+        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript", "HTML/CSS", "React"], grade: ""},
         {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26", tags: [], grade: ""},
         {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26", tags: [], grade: ""},
-        {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26", tags: ["Confucianism", "Toaism", "Mohism", "Legalism"], grade: ""}
+        {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26", tags: ["Confucianism", "Toaism"], grade: ""}
     ]
 };
+
+const languages = [{language: "C/C++", imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
+                    {language: 'Python', imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"},
+                    {language: "TypeScript", imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"},
+                    {language: "Java", imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"},
+                    {language: "PostgreSQL", imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"},
+                    {language: "Shell", imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"}
+                ];
+
+const tools = [{language: "Git", imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"},
+                {language: 'Linux', imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
+            ];
 
 export default function AboutPage() {
     const [activeTab, setActiveTab] = useState<'completed' | 'planned' | 'completing'>('completed');
@@ -67,46 +80,41 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="py-12 flex justify-center">
-                <div className="text-center">
-                    <h1 className="text-3xl font-bold text-gray-900 font-mono tracking-tighter">Languages</h1>
-                    <p className="text-2xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning or have had exposure to <br></br> </p>
-                    <div className="py-6 grid grid-cols-3 gap-4">
-                        <p className="text-gray-700"> • {' '}
-                            <span className='text-blue-700 font-mono tracking-tighter text-xl'>
-                                C/C++
-                            </span></p>
-                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
-                            <span className='text-yellow-500'>
-                                JavaScript
-                            </span> {' '}/{' '}
-                            <span className='text-blue-400'>
-                                TypeScript
-                            </span></p>
-                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
-                            <span className='text-lime-700'>
-                                Python
-                            </span></p>
-                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
-                            <span className='text-orange-400'>
-                                Java
-                            </span></p>
-                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
-                            <span className='text-red-400'>
-                                SQL
-                            </span></p>
-                        <p className="text-gray-700 font-mono tracking-tighter text-xl"> • {' '}
-                            <span className='text-gray-500'>
-                                Shell
-                            </span></p>
+            <div className='flex pt-20 pb-10 w-1/3 jusitfy-center items-center'>
+                <hr className="w-full h-1 p-0.5 bg-orange-600 border-1 rounded"></hr>
+            </div>
+
+            <div className='flex flex-row'>
+                <div className='w-1/2 flex flex-col items-center'>
+                    <h1 className=" pt-10 text-3xl text-center font-bold text-gray-900 font-mono tracking-tighter py-6">Languages</h1>
+
+                    <p className="text-center w-4/5 text-xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning or have had exposure to <br></br> </p>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pb-20">
+                        {languages.map((lang, index) => (
+                        <LanguageBadge key={index} language={lang.language} imgLink={lang.imgLink} index={index} />
+                        ))}
                     </div>
                 </div>
+
+                <div className='w-1/2 flex flex-col items-center'>
+                    <h1 className=" pt-10 text-3xl text-center font-bold text-gray-900 font-mono tracking-tighter py-6">Tools</h1>
+
+                    <p className="text-center w-4/5 text-xl text-gray-700 font-mono tracking-tighter">Below are the dev tools that I am currently learning or have had exposure to <br></br> </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 pb-20">
+                        {tools.map((lang, index) => (
+                        <LanguageBadge key={index} language={lang.language} imgLink={lang.imgLink} index={index} />
+                        ))}
+                    </div>
+                </div>
+
             </div>
 
             <h1 className="text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Courses</h1>
             <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-52">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pb-52">
                 {courses[activeTab].map((course, index) => (
                 <CourseCard key={index} course={course} type={activeTab} />
                 ))}
