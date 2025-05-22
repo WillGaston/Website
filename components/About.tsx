@@ -3,29 +3,31 @@ import { useState } from 'react';
 import CourseCard from './CourseCard';
 import CourseTabs from './CourseTabs';
 import LanguageBadge from './LanguageBadge';
+import { motion } from "framer-motion";
 
 const courses = {
-    completed: [{courseCode: "COMP1511", courseTitle: "Programming Fundamentals", term: "24T1", tags: ["C"], grade: "85"},
-        {courseCode: "COMP1521", courseTitle: "Computer Systems Fundamentals", term: "24T2", tags: ["C", "Assembly"], grade: "89"},
-        {courseCode: "COMP1531", courseTitle: "Software Engineering Fundamentals", term: "24T3", tags: ["TypeScript", "Git"], grade: "99"},
-        {courseCode: "COMP2521", courseTitle: "Data Structures & Algorithms", term: "24T2", tags: ["C"], grade: "86"},
-        {courseCode: "MATH1131", courseTitle: "Mathematics 1A", term: "24T1", tags: ["Linear Algebra", "Calc."], grade: "89"},
-        {courseCode: "MATH1231", courseTitle: "Mathematics 1B", term: "24T2", tags: ["Linear Algebra", "Calc."], grade: "86"},
-        {courseCode: "MATH1081", courseTitle: "Discrete Mathematics", term: "24T3", tags: ["Number Theory", "Proofs"], grade: "88"},
-        {courseCode: "PHYS1160", courseTitle: "Introduction to Astronomy", term: "24T3", tags: ["Physics", "Gen ed"], grade: "97"}
+    completed: [{courseCode: "COMP1511", courseTitle: "Programming Fundamentals", term: "24T1", tags: ["C"], grade: "85", rating: "8 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP1511"},
+        {courseCode: "COMP1521", courseTitle: "Computer Systems Fundamentals", term: "24T2", tags: ["C", "Assembly"], grade: "89", rating: "7.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP1521"},
+        {courseCode: "COMP1531", courseTitle: "Software Engineering Fundamentals", term: "24T3", tags: ["TypeScript", "Git"], grade: "99", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP1531"},
+        {courseCode: "COMP2521", courseTitle: "Data Structures & Algorithms", term: "24T2", tags: ["C"], grade: "86", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2521"},
+        {courseCode: "MATH1131", courseTitle: "Mathematics 1A", term: "24T1", tags: ["Linear Algebra", "Calc."], grade: "89", rating: "8 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/MATH1131"},
+        {courseCode: "MATH1231", courseTitle: "Mathematics 1B", term: "24T2", tags: ["Linear Algebra", "Calc."], grade: "86", rating: "7 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/MATH1231"},
+        {courseCode: "MATH1081", courseTitle: "Discrete Mathematics", term: "24T3", tags: ["Number Theory", "Proofs"], grade: "88", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/MATH1081"},
+        {courseCode: "PHYS1160", courseTitle: "Introduction to Astronomy", term: "24T3", tags: ["Physics", "Gen ed"], grade: "97", rating: "9.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/PHYS1160"},
+        {courseCode: "COMP2511", courseTitle: "Object Oriented Design & Programming", term: "25T1", tags: ["Java", "Git"], grade: "96", rating: "8.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2511"},
+        {courseCode: "COMP2041", courseTitle: "Software Construction: Techniques and Tools", term: "25T1", tags: ["Shell", "Python"], grade: "88", rating: "7 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2041"},
+        {courseCode: "COMP3311", courseTitle: "Database Systems", term: "25T1", tags: ["PostgreSQL", "Python"], grade: "97", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP3311"}
     ],
-    completing: [{courseCode: "COMP2511", courseTitle: "Object Oriented Design & Programming", term: "25T1", tags: ["Java", "Git"], grade: ""},
-        {courseCode: "COMP2041", courseTitle: "Software Construction: Techniques and Tools", term: "25T1", tags: ["Shell", "Python"], grade: ""},
-        {courseCode: "COMP3311", courseTitle: "Database Systems", term: "25T1", tags: ["PostgreSQL", "Python"], grade: ""}
+    completing: [{courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: "", rating: "", link: ""},
+        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: [], grade: "", rating: "", link: ""},
+        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: [], grade: "", rating: "", link: ""},
     ],
-    planned: [{courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: ""},
-        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: [], grade: ""},
-        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: [], grade: ""},
-        {courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: ""},
-        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript", "HTML/CSS", "React"], grade: ""},
-        {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26", tags: [], grade: ""},
-        {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26", tags: [], grade: ""},
-        {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26", tags: ["Confucianism", "Toaism"], grade: ""}
+    planned: [
+        {courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: "", rating: "", link: ""},
+        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript", "HTML/CSS", "React"], grade: "", rating: "", link: ""},
+        {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26", tags: [], grade: "", rating: "", link: ""},
+        {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26", tags: [], grade: "", rating: "", link: ""},
+        {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26", tags: ["Confucianism", "Toaism"], grade: "", rating: "", link: ""}
     ]
 };
 
@@ -74,7 +76,7 @@ export default function AboutPage() {
                         </span> (penultimate) student in <span className='text-orange-500'>
                             Computer Science
                         </span> with an <span className='text-orange-500'>
-                            89.75 WAM
+                            90.80 WAM
                         </span>.
                     </p>
                 </div>
@@ -116,7 +118,16 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pb-52">
                 {courses[activeTab].map((course, index) => (
-                <CourseCard key={index} course={course} type={activeTab} />
+                    <motion.a
+                        key={index} 
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="w-full"
+                        href={course.link}
+                        target="_blank"
+                    >
+                        <CourseCard course={course} type={activeTab} />
+                    </motion.a>
                 ))}
             </div>
 

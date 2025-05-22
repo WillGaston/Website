@@ -6,6 +6,8 @@ type CourseType = {
     term: string;
     tags: Array<string>;
     grade: string;
+    rating: string;
+    link: string;
 }
 
 type CourseCardType = {
@@ -33,7 +35,9 @@ export default function CourseCard({ course, type }: CourseCardType) {
       <h2 className="text-xl font-semibold text-gray-800">{course.courseTitle}</h2>
       <p className="text-gray-600">{course.courseCode}</p>
       <p className={`mt-2 text-sm text-black`}>
-          {isCompleted ? `Mark:  ${course.grade}` : ''}
+          {isCompleted ? `Mark:  ${course.grade}   |   Rating:  ${course.rating}` : ''}
+      </p>
+      <p className={`mt-2 text-sm text-black`}>
       </p>
       <div className="flex justify-between items-center mb-2">
         <p className={`mt-2 text-sm ${isCompleted ? 'text-green-600' : (areCompleting ? 'text-red-600' : 'text-blue-600')}`}>
