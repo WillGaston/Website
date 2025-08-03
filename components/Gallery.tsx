@@ -2,12 +2,17 @@ import Image from 'next/image';
 import React from 'react';
 
 const images = [
+  { src: '/images/avodb.png', 
+    language: 'Python | PostgreSQL', 
+    title: 'avoDB',
+    color: 'text-lime-700',
+    description: 'End-to-end encrypted database-as-a-service and messanger - cli based with an emphasis on security' },
+
   { src: '/images/NovelNote.jpg', 
     language: 'Python | Pandas', 
     title: 'NovelNote',
     color: 'text-lime-700',
     description: 'Python program featuring robust novel and quote recording capabilities, data querying and graphical statistics' },
-
 
   { src: '/images/comp1531Test.jpg',
     language: 'TypeScript',
@@ -15,13 +20,29 @@ const images = [
     title: 'Toohak - Quiz Game Backend',
     description: 'Quiz Game Backend using RESTful API, with integration testing of HTTP endpoints: made during COMP1531 24T3' },
 
+  { src: '/images/proxy.jpg', 
+    language: 'Python',
+    color: 'text-lime-700',
+    title: 'HTTP Web Proxy', 
+    description: 'HTTP Web Proxy featuring LRU cache, concurrency, and persistence. Supports GET, POST, HEAD, CONNECT requests ' },
+
+  { src: '/images/pageTab.jpg', 
+    language: 'C', 
+    title: 'Virtual Memory & Paging',
+    color: 'text-blue-700',
+    description: 'Virtual memory and a paging management system built on top of OS/161 educational operating system' },
+
+  { src: '/images/oft.jpg', 
+    language: 'C', 
+    title: 'Virtual File System Abstractions',
+    color: 'text-blue-700',
+    description: 'Designed a set of file system abstractions including open file tables and per-process file descriptors for OS/161 OS' },
 
   { src: '/images/huffman.jpg', 
     language: 'C',
     color: 'text-blue-700',
     title: 'Huffman Tree Encoder/Decoder', 
     description: 'CLI program which can encode and decode a huffman tree: made during COMP2521 24T2 Ass1' },
-
 
   { src: '/images/take.jpg',
       language: 'Shell',
@@ -101,33 +122,6 @@ const images = [
     title: 'AvoShell',
     description: 'Shell made using arguments and posix_spawn' },
 
-
-  { src: '/images/youngmaster.jpg', 
-    language: 'Python',
-    color: 'text-lime-700',
-    title: 'Young Master Chat Bot',
-    description: 'Chat bot using open ai api' },
-
-
-  { src: '/images/dripshop.jpg', 
-    language: 'Visual Basic',
-    color: 'text-indigo-600',
-    title: 'Colossal Drip Shop',
-    description: 'Esports apparel business website' },
-
-
-  { src: '/images/velocitywebsite.jpg', 
-    language: 'HTML | CSS',
-    color: 'text-slate-500',
-    title: 'Velocity Gaming Website',
-    description: 'Website gaming esports apparel business' },
-
-
-  { src: '/images/numbrainer.jpg', 
-    language: 'Python',
-    color: 'text-lime-700',
-    title: 'Num-Brainer',
-    description: 'Simple number guessing game' },
 ];
 
 interface GalleryProps {

@@ -35,11 +35,11 @@ function HomeContent() {
         <TopBarItem text="About Me & Academics" index={1}/>
         <TopBarItem text="Projects" index={2}/>
         <TopBarItem text="Gallery" index={3}/>
-        <TopBarItem text="Reviews" index={4}/>
+        {/* <TopBarItem text="Reviews" index={4}/> */}
         <TopBarButton icon={<CiLinkedin />} link={"https://www.linkedin.com/in/WillGaston1/"} />
         <TopBarButton icon={<FiGithub />} link={"https://github.com/WillGaston"} />
       </TopBar>
-      <div className="flex">
+      <div className="flex pt16">
       <AnimatePresence mode="wait">
           {active === 0 && (
             <motion.div
@@ -48,7 +48,7 @@ function HomeContent() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="absolute w-full"
+              className="relative w-full"
             >
               <HomePage />
             </motion.div>
@@ -61,7 +61,7 @@ function HomeContent() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="absolute w-full"
+              className="relative w-full"
             >
               <AboutPage />
             </motion.div>
@@ -74,7 +74,7 @@ function HomeContent() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="absolute w-full"
+              className="relative w-full"
             >
               <ProjectsPage />
             </motion.div>
@@ -87,24 +87,24 @@ function HomeContent() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="absolute w-full"
+              className="relative w-full"
             >
               <GalleryPage />
             </motion.div>
           )}
 
-          {active === 4 && (
+          {/* {active === 4 && (
             <motion.div
               key="reviews"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="absolute w-full"
+              className="relative w-full"
             >
               <ReviewsPage />
             </motion.div>
-          )}
+          )} */}
         </AnimatePresence>
       </div>
     </div>
