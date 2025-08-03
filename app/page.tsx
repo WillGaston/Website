@@ -14,7 +14,7 @@ import { CiLinkedin } from "react-icons/ci";
 
 
 import { motion, AnimatePresence } from "framer-motion";
-import ReviewsPage from "@/components/Reviews";
+//import ReviewsPage from "@/components/Reviews";
 
 
 export default function Home() {
