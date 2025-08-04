@@ -20,19 +20,19 @@ const images = [
     title: 'Toohak - Quiz Game Backend',
     description: 'Quiz Game Backend using RESTful API, with integration testing of HTTP endpoints: made during COMP1531 24T3' },
 
-  { src: '/images/proxy.jpg', 
+  { src: '', 
     language: 'Python',
     color: 'text-lime-700',
     title: 'HTTP Web Proxy', 
     description: 'HTTP Web Proxy featuring LRU cache, concurrency, and persistence. Supports GET, POST, HEAD, CONNECT requests ' },
 
-  { src: '/images/pageTab.jpg', 
+  { src: '', 
     language: 'C', 
     title: 'Virtual Memory & Paging',
     color: 'text-blue-700',
     description: 'Virtual memory and a paging management system built on top of OS/161 educational operating system' },
 
-  { src: '/images/oft.jpg', 
+  { src: '', 
     language: 'C', 
     title: 'Virtual File System Abstractions',
     color: 'text-blue-700',
@@ -149,17 +149,17 @@ const Gallery: React.FC<GalleryProps> = (
     : images;
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-6">
+    <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-6">
       {filteredImages.map((image, index) => (
         <div key={index} className="flex flex-col">
           <div className="p-4 flex flex-col items-center justify-center">
-            <p className="text-2xl font-semibold text-center">{image.title}</p>
+            <p className="text-lg md:text-2xl font-semibold text-center">{image.title}</p>
             <p className={`text-base font-normal text-center ${image.color}`}>{image.language}</p>
             <p className="text-lg mb-2 tracking-tight font-thin text-center">{image.description}</p>
             <div className="overflow-hidden rounded-lg shadow-lg h-auto w-full flex justify-center items-center">
               <Image
                 src={image.src}
-                alt={`Image ${index + 1}`}
+                alt={`No Image Currently ${index + 1}`}
                 width={600}
                 height={500}
                 className="object-cover"
