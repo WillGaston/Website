@@ -29,7 +29,7 @@ export function TopBarItem({text, index}) {
         "text-black bg-white"
       } `}>
 
-      <span className={`font-mono flex overflow-hidden transition-all w-16 md:w-32 text-xs md:text-lg ml-2 no-underline hover:underline decoration-orange-500`}>
+      <span className={`font-mono flex overflow-hidden transition-all w-12 md:w-32 text-xs md:text-lg md:ml-2 no-underline hover:underline decoration-orange-500`}>
         {text}
       </span>
 
@@ -43,7 +43,7 @@ export function TopBarButton({icon, link}) {
       <a 
         href={link}
         target="_blank"
-        className="flex items-center md:gap-2 px-0.5 md:px-4 py-2 bg-white text-black rounded transition"
+        className="flex items-center md:px-4 py-2 bg-white text-black rounded transition"
       >
         {icon}
     </a>
