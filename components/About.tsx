@@ -47,8 +47,8 @@ export default function AboutPage() {
     const [activeTab, setActiveTab] = useState<'completed' | 'planned' | 'completing'>('completed');
     return (
         <div className="flex flex-col items-center w-screen h-screen">
-            <div className='py-16 mx-auto text-center flex flex-col items-center'>
-                <h1 className='text-6xl font-bold font-mono tracking-tighter text-gray-800'>
+            <div className='py-10 md:py-16 mx-auto text-center flex flex-col items-center'>
+                <h1 className='text-2xl md:text-6xl font-bold font-mono tracking-tighter text-gray-800'>
                     {' '}
                     <span className='text-orange-500'>
                         Me
@@ -59,15 +59,15 @@ export default function AboutPage() {
             <div className="flex h-[60vh]">
                 {/* Left side with a circular image */}
                 <div className="flex justify-center items-center w-1/2">
-                    <div className="rounded-3xl overflow-hidden w-96 h-96 border-solid border-4 border-orange-500">
+                    <div className="rounded-3xl overflow-hidden w-48 h-48 md:w-96 md:h-96 border-solid border-4 border-orange-500">
                         <Image src="/images/me1.jpg" alt="Your Photo" width={500} height={500} className="object-cover w-full h-full" />
                     </div>
                 </div>
 
                 {/* Right side with text */}
                 <div className="flex flex-col justify-center w-1/2">
-                    <h1 className="text-6xl font-bold text-gray-900 font-mono tracking-tighter">Will Gaston</h1>
-                    <p className="text-2xl text-gray-700 font-mono tracking-tighter mt-4">
+                    <h1 className="text-2xl md:text-6xl font-bold text-gray-900 font-mono tracking-tighter">Will Gaston</h1>
+                    <p className="text-md md:text-2xl text-gray-700 font-mono tracking-tighter mt-4 mr-1">
                         Originally from Orange in country NSW, I currently live and study in <span className='text-orange-500'>
                             Sydney at UNSW
                         </span>.<br></br><br></br>
@@ -88,11 +88,11 @@ export default function AboutPage() {
 
             <div className='flex flex-row'>
                 <div className='w-1/2 flex flex-col items-center'>
-                    <h1 className=" pt-10 text-3xl text-center font-bold text-gray-900 font-mono tracking-tighter py-6">Languages</h1>
+                    <h1 className=" pt-10 text-xl md:text-3xl text-center font-bold text-gray-900 font-mono tracking-tighter py-6">Languages</h1>
 
-                    <p className="text-center w-4/5 text-xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning or have had exposure to <br></br> </p>
+                    <p className="text-center w-4/5 text-md md:text-xl text-gray-700 font-mono tracking-tighter">Below are the languages that I am currently learning or have had exposure to <br></br> </p>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 pb-20">
                         {languages.map((lang, index) => (
                         <LanguageBadge key={index} language={lang.language} imgLink={lang.imgLink} index={index} />
                         ))}
@@ -100,9 +100,9 @@ export default function AboutPage() {
                 </div>
 
                 <div className='w-1/2 flex flex-col items-center'>
-                    <h1 className=" pt-10 text-3xl text-center font-bold text-gray-900 font-mono tracking-tighter py-6">Tools</h1>
+                    <h1 className=" pt-10 text-xl md:text-3xl text-center font-bold text-gray-900 font-mono tracking-tighter py-6">Tools</h1>
 
-                    <p className="text-center w-4/5 text-xl text-gray-700 font-mono tracking-tighter">Below are the dev tools that I am currently learning or have had exposure to <br></br> </p>
+                    <p className="text-center w-4/5 text-md md:text-xl text-gray-700 font-mono tracking-tighter">Below are the dev tools that I am currently learning or have had exposure to <br></br> </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 pb-20">
                         {tools.map((lang, index) => (
@@ -113,7 +113,7 @@ export default function AboutPage() {
 
             </div>
 
-            <h1 className="text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Courses</h1>
+            <h1 className="text-xl md:text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Courses</h1>
             <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pb-52">
