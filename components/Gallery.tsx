@@ -149,26 +149,32 @@ const Gallery: React.FC<GalleryProps> = (
     : images;
 
   return (
-    <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-6">
-      {filteredImages.map((image, index) => (
-        <div key={index} className="flex flex-col">
-          <div className="p-4 flex flex-col items-center justify-center">
-            <p className="text-lg md:text-2xl font-semibold text-center">{image.title}</p>
-            <p className={`text-base font-normal text-center ${image.color}`}>{image.language}</p>
-            <p className="text-lg mb-2 tracking-tight font-thin text-center">{image.description}</p>
-            <div className="overflow-hidden rounded-lg shadow-lg h-auto w-full flex justify-center items-center">
-              <Image
-                src={image.src}
-                alt={`No Image Currently ${index + 1}`}
-                width={600}
-                height={500}
-                className="object-cover"
-              />
-            </div>
+      <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-6">
+    {filteredImages.map((image, index) => (
+      <div
+        key={index}
+        className="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden h-[32rem]" // fixed height
+      >
+        <div className="p-4 flex-1 flex flex-col justify-between">
+          <div className="text-center">
+            <p className="text-lg md:text-2xl font-semibold truncate">{image.title}</p>
+            <p className={`text-base font-normal ${image.color} truncate`}>{image.language}</p>
+            <p className="text-sm mb-2 text-gray-600 truncate">{image.description}</p>
+          </div>
+
+          <div className="flex justify-center items-center w-full mt-2 rounded-lg shadow-lg overflow-hidden flex-1">
+            <Image
+              src={image.src}
+              alt={`No Image Currently ${index + 1}`}
+              width={600}
+              height={400}
+              className="object-contain max-w-full max-h-full"
+            />
           </div>
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
+  </div>
   );
 };
 

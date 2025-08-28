@@ -7,13 +7,13 @@ import TopBar from "@/components/TopBar";
 import HomePage from "@/components/Home";
 import ProjectsPage from "@/components/Projects";
 import AboutPage from "@/components/About";
-import GalleryPage from "@/components/GalleryPage";
 
 import { FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 
 
 import { motion, AnimatePresence } from "framer-motion";
+import ExperienceSection from "@/components/ExperiencePage";
 //import ReviewsPage from "@/components/Reviews";
 
 
@@ -33,9 +33,8 @@ function HomeContent() {
       <TopBar>
         <TopBarItem text="William Gaston" index={0}/>
         <TopBarItem text="About Me & Academics" index={1}/>
-        <TopBarItem text="Projects" index={2}/>
-        <TopBarItem text="Gallery" index={3}/>
-        {/* <TopBarItem text="Reviews" index={4}/> */}
+        <TopBarItem text="Experience" index={2}/>
+        <TopBarItem text="Projects" index={3}/>
         <TopBarButton icon={<CiLinkedin />} link={"https://www.linkedin.com/in/WillGaston1/"} />
         <TopBarButton icon={<FiGithub />} link={"https://github.com/WillGaston"} />
       </TopBar>
@@ -67,7 +66,7 @@ function HomeContent() {
             </motion.div>
           )}
 
-          {active === 2 && (
+          {active === 3 && (
             <motion.div
               key="projects"
               initial={{ opacity: 0, y: -20 }}
@@ -80,7 +79,7 @@ function HomeContent() {
             </motion.div>
           )}
 
-          {active === 3 && (
+          {active === 2 && (
             <motion.div
               key="gallery"
               initial={{ opacity: 0, y: -20 }}
@@ -89,7 +88,7 @@ function HomeContent() {
               transition={{ duration: 0.1, ease: "easeOut" }}
               className="relative w-full"
             >
-              <GalleryPage />
+              <ExperienceSection />
             </motion.div>
           )}
 

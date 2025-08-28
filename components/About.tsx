@@ -16,15 +16,15 @@ const courses = {
         {courseCode: "PHYS1160", courseTitle: "Introduction to Astronomy", term: "24T3", tags: ["Physics", "Gen ed"], grade: "97", rating: "9.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/PHYS1160"},
         {courseCode: "COMP2511", courseTitle: "Object Oriented Design & Programming", term: "25T1", tags: ["Java", "Git"], grade: "96", rating: "8.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2511"},
         {courseCode: "COMP2041", courseTitle: "Software Construction: Techniques and Tools", term: "25T1", tags: ["Shell", "Python"], grade: "88", rating: "7 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2041"},
-        {courseCode: "COMP3311", courseTitle: "Database Systems", term: "25T1", tags: ["PostgreSQL", "Python"], grade: "97", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP3311"}
+        {courseCode: "COMP3311", courseTitle: "Database Systems", term: "25T1", tags: ["PostgreSQL", "Python"], grade: "97", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP3311"},
+        {courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: "", rating: "", link: ""},
+        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: ["TCP/IP"], grade: "", rating: "", link: ""},
+        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: ["Theory", "CTF"], grade: "", rating: "", link: ""}
     ],
-    completing: [{courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: "", rating: "", link: ""},
-        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: [], grade: "", rating: "", link: ""},
-        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: [], grade: "", rating: "", link: ""},
+    completing: [{courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: "", rating: "", link: ""},
+        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript", "HTML/CSS", "React"], grade: "", rating: "", link: ""},
     ],
     planned: [
-        {courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: "", rating: "", link: ""},
-        {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript", "HTML/CSS", "React"], grade: "", rating: "", link: ""},
         {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26", tags: [], grade: "", rating: "", link: ""},
         {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26", tags: [], grade: "", rating: "", link: ""},
         {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26", tags: ["Confucianism", "Toaism"], grade: "", rating: "", link: ""}
@@ -112,6 +112,9 @@ export default function AboutPage() {
                 </div>
 
             </div>
+
+            <h1 className="text-xl md:text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Extra-Curriculars</h1>
+            <p className="text-center w-4/5 text-md md:text-xl text-gray-700 font-mono tracking-tighter pb-12">IMC Programming Contest (SPCPA) <br></br> AllUni Coding Competition <br></br> IMC Coding Competition (CPMSoc) <br></br> Various SPAR Contests <br></br>  </p>
 
             <h1 className="text-xl md:text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Courses</h1>
             <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
