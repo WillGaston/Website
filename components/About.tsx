@@ -14,14 +14,14 @@ const courses = {
         {courseCode: "MATH1231", courseTitle: "Mathematics 1B", term: "24T2", tags: ["Linear Algebra", "Calc."], grade: "86", rating: "7 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/MATH1231"},
         {courseCode: "MATH1081", courseTitle: "Discrete Mathematics", term: "24T3", tags: ["Number Theory", "Proofs"], grade: "88", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/MATH1081"},
         {courseCode: "PHYS1160", courseTitle: "Introduction to Astronomy", term: "24T3", tags: ["Physics", "Gen ed"], grade: "97", rating: "9.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/PHYS1160"},
-        {courseCode: "COMP2511", courseTitle: "Object Oriented Design & Programming", term: "25T1", tags: ["Java", "Git"], grade: "96", rating: "8.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2511"},
+        {courseCode: "COMP2511", courseTitle: "Object Oriented Design & Programming", term: "25T1", tags: ["Java", "Git"], grade: "96", rating: "9.5 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2511"},
         {courseCode: "COMP2041", courseTitle: "Software Construction: Techniques and Tools", term: "25T1", tags: ["Shell", "Python"], grade: "88", rating: "7 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP2041"},
         {courseCode: "COMP3311", courseTitle: "Database Systems", term: "25T1", tags: ["PostgreSQL", "Python"], grade: "97", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP3311"},
-        {courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: "", rating: "", link: ""},
-        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: ["TCP/IP"], grade: "", rating: "", link: ""},
-        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: ["Theory", "CTF"], grade: "", rating: "", link: ""}
+        {courseCode: "COMP3231", courseTitle: "Operating Systems", term: "25T2", tags: ["C", "Linux"], grade: "90", rating: "9 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP3231"},
+        {courseCode: "COMP3331", courseTitle: "Computer Networks and Applications", term: "25T2", tags: ["TCP/IP"], grade: "89", rating: "8 / 10", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/COMP3331"},
+        {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: ["Theory", "CTF"], grade: "84", rating: "7 / 10", link: "https://www.handbook.unsw.edu.au/postgraduate/courses/2025/COMP6841"}
     ],
-    completing: [{courseCode: "COMP3821", courseTitle: "Extended Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: "", rating: "", link: ""},
+    completing: [{courseCode: "COMP3121", courseTitle: "Algorithm Design and Analysis", term: "25T3", tags: ["DS & A", "Proofs"], grade: "", rating: "", link: ""},
         {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JavaScript", "HTML/CSS", "React"], grade: "", rating: "", link: ""},
     ],
     planned: [
