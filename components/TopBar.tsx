@@ -8,7 +8,7 @@ export default function TopBar({ children }) {
 
   return (
     <div className="flex w-full min-h-20 bg-w items-center">
-        <nav className="bg-white flex w-full h-full justify-center">
+        <nav className="bg-white flex w-full h-full justify-center flex-wrap">
 
           {children}
 
