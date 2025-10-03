@@ -7,8 +7,8 @@ import { IconContext } from "react-icons";
 export default function TopBar({ children }) {
 
   return (
-    <div className="flex w-screen h-16 bg-white shadow-md border-b items-center">
-        <nav className="bg-white flex w-full h-full justify-center gap-4">
+    <div className="flex w-full min-h-20 bg-w items-center">
+        <nav className="bg-white flex w-full h-full justify-center">
 
           {children}
 
@@ -24,12 +24,12 @@ export function TopBarItem({text, index}) {
     <li
       onClick = {() => setActive(index)} 
       className={`
-      relative flex items-center py-2 md:px-1 my-2 rounded-md cursor-pointer transition-colors duration-300 ease-in-out
+      flex items-center rounded-md cursor-pointer transition-colors duration-300 ease-in-out m-2 justify-between
       ${ active === index ? "text-orange-500 underline" : 
         "text-black bg-white"
       } `}>
 
-      <span className={`font-mono flex overflow-hidden transition-all w-12 md:w-32 text-xs md:text-lg md:ml-2 no-underline hover:underline decoration-orange-500`}>
+      <span className={`font-mono flex overflow-hidden transition-all w-[max-content] text-xs md:text-lg md:ml-2 no-underline hover:underline decoration-orange-500 m-0`}>
         {text}
       </span>
 

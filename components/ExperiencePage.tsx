@@ -51,7 +51,7 @@ export default function ExperienceSection() {
 
     return (
       <div className="mb-12">
-        <h2 className="text-3xl font-bold font-mono text-gray-800 mb-6 text-center">{title}</h2>
+        <h2 className="text-3xl font-bold font-mono text-orange-500 underline mb-6 text-center">{title}</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 p-4">
           {items.map((exp, index) => (
             <div

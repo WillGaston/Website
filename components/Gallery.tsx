@@ -149,7 +149,7 @@ const Gallery: React.FC<GalleryProps> = (
     : images;
 
   return (
-      <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-6">
+      <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-6 bg-white">
     {filteredImages.map((image, index) => (
       <div
         key={index}

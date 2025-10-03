@@ -7,7 +7,7 @@ type CourseTabsProps = {
 
 export default function CourseTabs({ activeTab, setActiveTab }: CourseTabsProps) {
   return (
-    <div className="flex space-x-2 mb-6">
+    <div className="flex space-x-2 mb-6 ml-2 mr-2">
       <button
         className={`px-4 py-2 rounded-full border ${activeTab === 'completed' ? 'bg-green-100 text-green-700 border-green-400' : 'bg-white border-gray-300'}`}
         onClick={() => setActiveTab('completed')}

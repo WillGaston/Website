@@ -29,16 +29,16 @@ function HomeContent() {
   const { active } = useContext(TopBarContext);
 
   return (
-    <div className="flex flex-col h-screen w-screen">
+    <div className="flex flex-col min-h-screen w-screen">
       <TopBar>
         <TopBarItem text="William Gaston" index={0}/>
-        <TopBarItem text="About Me & Academics" index={1}/>
+        <TopBarItem text="About Me" index={1}/>
         <TopBarItem text="Experience" index={2}/>
         <TopBarItem text="Projects" index={3}/>
         <TopBarButton icon={<CiLinkedin />} link={"https://www.linkedin.com/in/WillGaston1/"} />
         <TopBarButton icon={<FiGithub />} link={"https://github.com/WillGaston"} />
       </TopBar>
-      <div className="flex pt16">
+      <div className="flex pt16 bg-white">
       <AnimatePresence mode="wait">
           {active === 0 && (
             <motion.div

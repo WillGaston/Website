@@ -24,7 +24,7 @@ export default function ProjectsPage() {
       </div>
       <div className = 'py-2 mx-auto text-center flex flex-col items-center text-xl font-mono tracking-tighter'>
         Below are various projects I have completed as High School and Personal projects, and University assignments.
-        <div className="space-x-4 py-4">
+        <div className="space-x-4 py-4 ml-2 mr-2">
         <button
             onClick={() => handleLanguageFilter('C')}
             className={`py-2 px-4 font-mono tracking-tighter rounded-full ${
@@ -42,20 +42,20 @@ export default function ProjectsPage() {
             Python
           </button>
           <button
-            onClick={() => handleLanguageFilter('JavaScript/TypeScript')}
-            className={`py-2 px-4 font-mono tracking-tighter rounded-full ${
-              selectedLanguage === 'JavaScript/TypeScript' ? 'bg-yellow-500 text-white' : 'bg-white text-yellow-500'
-            } border border-yellow-500 hover:bg-yellow-100 hover:text-yellow-500`}
-          >
-            JavaScript/TypeScript
-          </button>
-          <button
             onClick={() => handleLanguageFilter('Java')}
             className={`py-2 px-4 font-mono tracking-tighter rounded-full ${
               selectedLanguage === 'Java' ? 'bg-orange-400 text-white' : 'bg-white text-orange-400'
             } border border-orange-400 hover:bg-red-100 hover:text-orange-400`}
           >
             Java
+          </button>
+          <button
+            onClick={() => handleLanguageFilter('JavaScript/TypeScript')}
+            className={`py-2 px-4 font-mono tracking-tighter rounded-full ${
+              selectedLanguage === 'JavaScript/TypeScript' ? 'bg-yellow-500 text-white' : 'bg-white text-yellow-500'
+            } border border-yellow-500 hover:bg-yellow-100 hover:text-yellow-500`}
+          >
+            JavaScript/TypeScript
           </button>
           <button
             onClick={() => handleLanguageFilter('Other')}

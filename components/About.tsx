@@ -59,15 +59,15 @@ export default function AboutPage() {
             <div className="flex h-[60vh]">
                 {/* Left side with a circular image */}
                 <div className="flex justify-center items-center w-1/2">
-                    <div className="rounded-3xl overflow-hidden w-48 h-48 md:w-96 md:h-96 border-solid border-4 border-orange-500">
+                    <div className="rounded-3xl overflow-hidden w-48 h-48 md:w-96 md:h-96 border-solid border-4 border-orange-500 ml-5">
                         <Image src="/images/me1.jpg" alt="Your Photo" width={500} height={500} className="object-cover w-full h-full" />
                     </div>
                 </div>
 
                 {/* Right side with text */}
                 <div className="flex flex-col justify-center w-1/2">
-                    <h1 className="text-2xl md:text-6xl font-bold text-gray-900 font-mono tracking-tighter">Will Gaston</h1>
-                    <p className="text-md md:text-2xl text-gray-700 font-mono tracking-tighter mt-4 mr-1">
+                    <h1 className="text-2xl md:text-6xl p-5 m:p-0 font-bold text-gray-900 font-mono tracking-tighter">Will Gaston</h1>
+                    <p className="text-md md:text-2xl p-5 m:p-0 text-gray-700 font-mono tracking-tighter mt-4 mr-0 md:mr-2">
                         Originally from Orange in country NSW, I currently live and study in <span className='text-orange-500'>
                             Sydney at UNSW
                         </span>.<br></br><br></br>
