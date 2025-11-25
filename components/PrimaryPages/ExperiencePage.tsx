@@ -12,16 +12,12 @@ type ExperienceType = {
 };
 
 export default function ExperienceSection() {
-  const futureExps = experience.filter(exp => exp.when === 'future');
-  const currentExps = experience.filter(exp => exp.when === 'current');
-  const previousExps = experience.filter(exp => exp.when === 'previous');
 
-  const renderSection = (title: string, items: ExperienceType[]) => {
+  const renderSection = (items: ExperienceType[]) => {
     if (items.length === 0) return null;
 
     return (
       <div className="mb-12">
-        <h2 className="text-3xl font-bold font-mono text-orange-500 underline mb-6 text-center">{title}</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 p-4">
           {items.map((exp, index) => (
             <ExperienceCard title={exp.title} company={exp.company} duration={exp.duration}
@@ -41,9 +37,7 @@ export default function ExperienceSection() {
         Below are the work experience, internship and job opportunities I have or will participate in.
       </p>
 
-      {renderSection('Future', futureExps)}
-      {renderSection('Current', currentExps)}
-      {renderSection('Previous', previousExps)}
+      {renderSection(experience)}
     </div>
   );
 }

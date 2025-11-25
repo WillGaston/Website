@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { TopBarProvider, TopBarContext } from "@/components/Navigation/TopBarContext";
 import TopBar from "@/components/Navigation/TopBar";
 import HomePage from "@/components/PrimaryPages/HomePage";
-import ProjectsPage from "@/components/Projects";
+import ProjectsPage from "@/components/PrimaryPages/ProjectsPage";
 
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,7 +27,7 @@ function HomeContent() {
   return (
     <div className="flex flex-col h-screen w-screen">
       <TopBar />
-      <div className="flex-1">
+      <div className="flex-1 overflow-y-auto">
         <AnimatePresence mode="wait">
           {active === 0 && (
             <motion.div
