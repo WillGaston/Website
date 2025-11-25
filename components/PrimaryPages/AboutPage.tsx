@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import LanguageBadge from '../LanguageBadge';
 import CourseTabs from '../Course/CourseTabs';
 import CourseCard from '../Course/CourseCard';
-import { courses, language s, tools } from '@/app/data';
+import { courses, languages, tools } from '@/app/data';
 
 export default function AboutPage() {
     const [activeTab, setActiveTab] = useState<'completed' | 'planned' | 'completing'>('completed');
