@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import LanguageBadge from '../LanguageBadge';
 import CourseTabs from '../Course/CourseTabs';
@@ -8,6 +8,54 @@ import { courses, languages, tools } from '@/app/data';
 
 export default function AboutPage() {
     const [activeTab, setActiveTab] = useState<'completed' | 'planned' | 'completing'>('completed');
+    const [inputText, setInputText] = useState("");
+    const [sortType, setSortType] = useState("");
+    const [sortedCourses ,setSortedCourses] = useState(courses);
+
+    const doSort = (itemsToSort) => {
+        if (!itemsToSort) return;
+        
+        const sorted = [...itemsToSort].sort((a, b) => {
+        
+        switch (sortType) {
+        case "GA":
+            return Number(a.grade) - Number(b.grade);
+        case "GD":
+            return Number(b.grade) - Number(a.grade);
+        case "RA":
+            return Number(a.rating) - Number(b.rating);
+        case "RD":
+            return Number(b.rating) - Number(a.rating);
+        case "DA":
+            return a.term.localeCompare(b.term);
+        case "DD": {
+            return b.term.localeCompare(a.term);
+        }
+        default:
+            return 0;
+        }
+        });
+
+        return sorted;
+    }
+
+    const doSearch = () => {
+        const sortedSearched = courses[activeTab].filter((course) => {
+                return course.courseCode.toLowerCase().includes(inputText.toLowerCase()) ||
+                course.courseTitle.toLowerCase().includes(inputText.toLowerCase());
+            });
+
+        const sorted = doSort(sortedSearched);
+        setSortedCourses(prev => ({
+            ...prev,
+            [activeTab]: sorted
+        }));
+    }
+
+    useEffect(() => {
+        doSearch();
+    }, [sortType, inputText, activeTab]);
+
     return (
         <div className="flex flex-col items-center w-full h-full">
             <div className='py-10 md:py-16 mx-auto text-center flex flex-col items-center h-full'>
@@ -79,9 +127,33 @@ export default function AboutPage() {
 
             <h1 className="text-xl md:text-3xl font-bold text-gray-900 font-mono tracking-tighter py-6">Courses</h1>
             <CourseTabs activeTab={activeTab} setActiveTab={setActiveTab} />
-            
+
+            <div className='flex flex-row gap-2'>
+                <input
+                    type='text'
+                    placeholder='Begin typing to search courses...'
+                    onChange={(event) => setInputText(event.target.value)}
+                    className='border border-gray-600 rounded-lg p-2 w-[200px] md:w-[600px] text-sm'
+                />
+
+                <select
+                    id="sort" name="sort"
+                    className='border border-gray-600 rounded-lg'
+                    onChange={(event) => setSortType(event.target.value)}
+                    defaultValue={""}
+                >
+                    <option value="" disabled>Sort By...</option>
+                    <option value="GA">Grade Ascending</option>
+                    <option value="GD">Grade Descending</option>
+                    <option value="RA">Rating Ascending</option>
+                    <option value="RD">Rating Descending</option>
+                    <option value="DA">Date Ascending</option>
+                    <option value="DD">Date Descending</option>
+                </select>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pb-52">
-                {courses[activeTab].map((course, index) => (
+                {sortedCourses[activeTab].map((course, index) => (
                     <motion.a
                         key={index} 
                         whileHover={{ scale: 1.05 }}
