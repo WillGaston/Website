@@ -1,0 +1,35 @@
+import Image from 'next/image';
+
+export default function HomePage({  }) {
+  return (
+    <div className="flex flex-row bg-grey-200 w-full h-full min-h-0">
+      <div className = 'mx-auto text-center flex flex-col items-center h-full'>
+        <div className="flex h-2/3">
+          <div className="flex justify-center items-center w-1/2">
+            <div className="rounded-full overflow-hidden w-48 h-48 md:w-96 md:h-96 border-solid border-4 border-orange-500">
+              <Image src="/images/me.jpg" alt="Your Photo" width = {500} height = {500} className="object-cover w-full h-full" />
+            </div>
+          </div>
+            
+          <div className="flex flex-col justify-center w-1/2 px-2">
+            <h1 className="text-2xl md:text-5xl font-mono font-bold text-gray-900">Hey, I am {' '}
+              <span className='text-orange-500'>
+                Will
+              </span>
+            .</h1>
+            <br></br>
+            <p className="text-lg md:text-2xl font-mono text-gray-700 mt-4">
+              <br></br>2nd Year <span className='text-orange-500'>
+                Computer Science
+              </span> student @ UNSW <br></br><br></br>
+                ⚲ <span className='text-orange-500'>
+                Sydney
+                </span>, Australia
+            </p>
+          </div>
+        </div>
+        <hr className="w-48 h-1 bg-orange-600 border-0 rounded"></hr>
+      </div>
+    </div>
+  );
+};
